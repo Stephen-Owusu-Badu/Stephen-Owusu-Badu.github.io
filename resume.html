@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Stephen Owusu-Badu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f6f1;
+        }
+        
+        .resume-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .resume-header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .resume-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .resume-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-download {
+            background: #d4af37;
+            color: #1a1a1a;
+        }
+        
+        .btn-download:hover {
+            background: #b8951f;
+            transform: translateY(-2px);
+        }
+        
+        .btn-back {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-back:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .pdf-viewer {
+            flex: 1;
+            width: 100%;
+            border: none;
+            background: white;
+        }
+        
+        .fallback-message {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        
+        .fallback-message a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-header">
+            <h1>Stephen Owusu-Badu - Resume</h1>
+            <div class="resume-actions">
+                <a href="index.html" class="btn btn-back">← Back to Home</a>
+                <a href="assets/pdfs/owusubaduresume.pdf" download class="btn btn-download">Download PDF</a>
+            </div>
+        </div>
+        <object data="assets/pdfs/owusubaduresume.pdf" type="application/pdf" class="pdf-viewer">
+            <iframe src="assets/pdfs/owusubaduresume.pdf" class="pdf-viewer">
+                <div class="fallback-message">
+                    <p>Your browser does not support PDF viewing.</p>
+                    <p><a href="assets/pdfs/owusubaduresume.pdf" target="_blank">Click here to view the PDF</a></p>
+                </div>
+            </iframe>
+        </object>
+    </div>
+</body>
+</html>
